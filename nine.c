@@ -95,19 +95,26 @@ struct student{
 };
 
 int main(){
-    struct student s1 = {1001 , 9.2 , "Atharv"};
-    printf("student roll = %d \n" , s1.roll);
-        printf("student cgpa = %f \n" , s1.cgpa);
-            printf("student name = %s \n" , s1.name);
+//     struct student s1 = {1001 , 9.2 , "Atharv"};
+//     printf("student roll = %d \n" , s1.roll);
+//         printf("student cgpa = %f \n" , s1.cgpa);
+//             printf("student name = %s \n" , s1.name);
 
-            printf("\n");
-            
+//             printf("\n");
 
-            struct student *ptr = &s1;
-            printf("student roll =%d \n" , (*ptr).roll);
-            printf("student cgpa =%f \n" , (*ptr).cgpa);
-            printf("student name =%s \n" , (*ptr).name);           
 
+//             struct student *ptr = &s1;
+//             printf("student roll =%d \n" , (*ptr).roll);
+//             printf("student cgpa =%f \n" , (*ptr).cgpa);
+//             printf("student name =%s \n" , (*ptr).name);           
+
+            /*Arrow operator*/
+
+            struct student s1 = {1001 , 9.2 , "Atharv"};
+                printf("student roll = %d \n" , s1.roll);
+
+                struct student *ptr = &s1;
+                    printf("student -> roll =%d \n" , ptr ->roll);
 
     return 0;
 }
