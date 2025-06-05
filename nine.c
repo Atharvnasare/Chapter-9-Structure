@@ -167,58 +167,86 @@
 
 /*Que . Enter Address (house no , Block , CIty , state)of 5 people*/
 
-struct address{
-    int houseNo;
-    int block;
-    char city[100];
-    char state[100];
+// struct address{
+//     int houseNo;
+//     int block;
+//     char city[100];
+//     char state[100];
+// };
+
+// void printAdd(struct address add);
+
+// int main(){
+//     struct address adds[5];
+
+//     //input
+//     printf("Enter info for Person No 1 :");
+//     scanf("%d", &adds[0].houseNo);
+//     scanf("%d", &adds[0].block );
+//     scanf("%s", adds[0].city);
+//     scanf("%s", adds[0].state);
+
+//     printf("Enter info for Person No 2 :");
+//     scanf("%d", &adds[1].houseNo);
+//     scanf("%d", &adds[1].block );
+//     scanf("%s", adds[1].city);
+//     scanf("%s", adds[1].state);
+
+//     printf("Enter info for Person No 3 :");
+//     scanf("%d", &adds[2].houseNo);
+//     scanf("%d", &adds[2].block );
+//     scanf("%s", adds[2].city);
+//     scanf("%s", adds[2].state);
+
+//     printf("Enter info for Person No 4 :");
+//     scanf("%d", &adds[3].houseNo);
+//     scanf("%d", &adds[3].block );
+//     scanf("%s", adds[3].city);
+//     scanf("%s", adds[3].state);
+
+//     printf("Enter info for Person No 5 :");
+//     scanf("%d", &adds[4].houseNo);
+//     scanf("%d", &adds[4].block );
+//     scanf("%s", adds[4].city);
+//     scanf("%s", adds[4].state);
+
+//     printAdd(adds[0]);
+//     printAdd(adds[1]);
+//     printAdd(adds[2]);
+//     printAdd(adds[3]);
+//     printAdd(adds[4]);
+
+//     return 0;
+// }
+
+// void printAdd(struct address add){
+//     printf("Address is : %d , %d , %s , %s \n" , add.houseNo , add.block , add.city , add.state);
+// }
+
+/*create a structure to store Vectors . then make a function to return sum of 2 vectors*/
+
+struct vector{
+    int x;
+    int y;
 };
 
-void printAdd(struct address add);
-
+void calSum(struct vector v1 , struct vector v2 , struct vector sum);
 int main(){
-    struct address adds[5];
+    struct vector v1 ={5,10};
+    struct vector v2 ={3,7};
+    struct vector sum ={0};
 
-    //input
-    printf("Enter info for Person No 1 :");
-    scanf("%d", &adds[0].houseNo);
-    scanf("%d", &adds[0].block );
-    scanf("%s", adds[0].city);
-    scanf("%s", adds[0].state);
-
-    printf("Enter info for Person No 2 :");
-    scanf("%d", &adds[1].houseNo);
-    scanf("%d", &adds[1].block );
-    scanf("%s", adds[1].city);
-    scanf("%s", adds[1].state);
-
-    printf("Enter info for Person No 3 :");
-    scanf("%d", &adds[2].houseNo);
-    scanf("%d", &adds[2].block );
-    scanf("%s", adds[2].city);
-    scanf("%s", adds[2].state);
-
-    printf("Enter info for Person No 4 :");
-    scanf("%d", &adds[3].houseNo);
-    scanf("%d", &adds[3].block );
-    scanf("%s", adds[3].city);
-    scanf("%s", adds[3].state);
-
-    printf("Enter info for Person No 5 :");
-    scanf("%d", &adds[4].houseNo);
-    scanf("%d", &adds[4].block );
-    scanf("%s", adds[4].city);
-    scanf("%s", adds[4].state);
-
-    printAdd(adds[0]);
-    printAdd(adds[1]);
-    printAdd(adds[2]);
-    printAdd(adds[3]);
-    printAdd(adds[4]);
+    calSum(v1 ,v2 , sum);
 
     return 0;
 }
 
-void printAdd(struct address add){
-    printf("Address is : %d , %d , %s , %s \n" , add.houseNo , add.block , add.city , add.state);
+void calSum(struct vector v1 , struct vector v2 , struct vector sum){
+
+    sum.x =v1.x + v2.x;
+    sum.y =v1.y + v2.y;
+
+    printf("sum of x is : %d \n" , sum.x);
+
+    printf("sum of y is : %d \n" , sum.y);
 }
