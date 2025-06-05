@@ -225,18 +225,47 @@
 
 /*create a structure to store Vectors . then make a function to return sum of 2 vectors*/
 
-struct complex{
-    int real ;
-    int img ;
-};
+// struct complex{
+//     int real ;
+//     int img ;
+// };
+
+// int main(){
+//     struct complex number1 ={5,8};
+//     struct complex *ptr = &number1;
+//     printf("real part = %d\n" , ptr -> real );
+
+//         printf("img part = %d\n" , ptr -> img );
+
+//     return 0;
+
+// }
+
+/*make a structure of store Bank Account information of customer of ABC bank also make the alias for it*/
+
+typedef struct BankAccount {
+    int accountNo;
+    char name[100];
+
+}acc;
 
 int main(){
-    struct complex number1 ={5,8};
-    struct complex *ptr = &number1;
-    printf("real part = %d\n" , ptr -> real );
+    acc acc1 ={123, "Atharv Nasare"};
+    acc acc2 ={456, "Ashwini Rewatkar"};
+    acc acc3 ={789, "Vedanti Nasare"};
 
-        printf("img part = %d\n" , ptr -> img );
+    printf("Acc No = %d \n" , acc1.accountNo);
+    printf("Name = %s \n", acc1.name);
 
-    return 0;
+    printf("\n");
 
+    printf("Acc No = %d \n" , acc2.accountNo);
+    printf("Name = %s \n", acc2.name);
+
+    printf("\n");
+
+    printf("Acc No = %d \n" , acc3.accountNo);
+    printf("Name = %s \n", acc3.name);
+
+        return 0;
 }
