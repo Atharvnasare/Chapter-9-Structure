@@ -88,13 +88,13 @@
 
 /*Pointer to structure*/
 
-struct student{
-    int roll ;
-    float cgpa;
-    char name[100];
-};
+// struct student{
+//     int roll ;
+//     float cgpa;
+//     char name[100];
+// };
 
-int main(){
+// int main(){
 //     struct student s1 = {1001 , 9.2 , "Atharv"};
 //     printf("student roll = %d \n" , s1.roll);
 //         printf("student cgpa = %f \n" , s1.cgpa);
@@ -110,11 +110,55 @@ int main(){
 
             /*Arrow operator*/
 
-            struct student s1 = {1001 , 9.2 , "Atharv"};
-                printf("student roll = %d \n" , s1.roll);
+//             struct student s1 = {1001 , 9.2 , "Atharv"};
+//                 printf("student roll = %d \n" , s1.roll);
 
-                struct student *ptr = &s1;
-                    printf("student -> roll =%d \n" , ptr ->roll);
+//                 struct student *ptr = &s1;
+//                     printf("student -> roll =%d \n" , ptr ->roll);
 
-    return 0;
+//     return 0;
+// }
+
+/*Passing structure to function*/
+
+//     struct student{
+//         int roll ;
+//         float cgpa;
+//         char name[100];
+// };
+
+// void printInfo(struct student s1);
+
+//     int main(){
+//         struct student s1 ={1001 , 9.2 , "Atharv Shamdev Nasare"};
+//     printInfo(s1);
+
+// return 0;
+// }
+
+// void printInfo(struct  student s1){
+
+//     printf("student information : \n");
+//     printf("\n");
+
+//     printf("student.roll =%d \n" , s1.roll);
+//     printf("student.cgpa =%f \n" , s1.cgpa);
+//     printf("student.name =%s \n" , s1.name);  
+// }
+
+typedef struct student {
+    int roll ;
+    float cgpa ;
+    char name [100];
+
+}coe;
+
+int main() {
+    coe s1;
+    s1.roll = 10020;
+    s1.cgpa = 9.2;
+    strcpy(s1.name , "sharadha");
+
+
+    printf("Student name is %s and i have got %f and my roll no is %d \n" , s1.name , s1.cgpa , s1.roll);
 }
